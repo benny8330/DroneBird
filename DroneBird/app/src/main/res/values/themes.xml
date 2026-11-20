@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base app theme. AppCompat so activities can extend AppCompatActivity. -->
+    <style name="Theme.DroneBird" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/sky_top</item>
+        <item name="colorPrimaryDark">@color/sky_bottom</item>
+        <item name="colorAccent">@color/rc_green</item>
+        <item name="android:windowBackground">@color/menu_bg</item>
+    </style>
+</resources>

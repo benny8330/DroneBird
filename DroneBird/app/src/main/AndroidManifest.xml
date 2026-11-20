@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- DroneBird requires USB host (OTG) to read the DJI RC-N1 as a serial device. -->
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:label="@string/app_name"
+        android:roundIcon="@android:drawable/ic_menu_compass"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DroneBird">
+
+        <!-- Entry point / menu. -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Live USB connect/disconnect screen. Receives USB attach broadcasts so the
+             app can be launched automatically when the controller is plugged in. -->
+        <activity
+            android:name=".ControllerDetectionActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            <!-- device_filter.xml holds placeholder VID/PID. Fill real values from the
+                 Diagnostic screen (see BUILD_GUIDE Part 8). -->
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+
+        <!-- Byte-inspector + per-axis calibration. -->
+        <activity
+            android:name=".DiagnosticActivity"
+            android:exported="false" />
+
+        <!-- The game. Landscape-locked; no DJI meta-data, no API key. -->
+        <activity
+            android:name=".GameActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+    </application>
+
+</manifest>

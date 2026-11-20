@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Sky gradient -->
+    <color name="sky_top">#FF2E6FB7</color>
+    <color name="sky_bottom">#FF8FC7F0</color>
+
+    <!-- Pipes -->
+    <color name="pipe_green">#FF3BA55D</color>
+    <color name="pipe_cap">#FF2E8049</color>
+
+    <!-- Drone -->
+    <color name="drone_body">#FF2B2B2B</color>
+    <color name="drone_accent">#FFFFC107</color>
+
+    <!-- HUD -->
+    <color name="hud_text">#FFFFFFFF</color>
+    <color name="hud_shadow">#99000000</color>
+    <color name="hud_amber">#FFFFB300</color>
+
+    <!-- Controller / status -->
+    <color name="rc_green">#FF00C853</color>
+    <color name="crash_red">#FFE53935</color>
+
+    <!-- Overlays & buttons -->
+    <color name="overlay_scrim">#AA000000</color>
+    <color name="button_fill">#FF37474F</color>
+    <color name="button_text">#FFFFFFFF</color>
+
+    <!-- Menu background -->
+    <color name="menu_bg">#FF102A43</color>
+</resources>
