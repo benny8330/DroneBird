@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DroneBird</string>
+
+    <!-- Menu -->
+    <string name="menu_title">DroneBird</string>
+    <string name="menu_subtitle">RC-N1 raw-serial Flappy</string>
+    <string name="btn_play">PLAY</string>
+    <string name="btn_detection">CONTROLLER SETUP</string>
+    <string name="btn_diagnostic">DIAGNOSTIC / CALIBRATE</string>
+
+    <!-- Connection states -->
+    <string name="state_connected">CONNECTED</string>
+    <string name="state_connecting">Connecting…</string>
+    <string name="state_no_device">No controller detected</string>
+    <string name="state_permission_denied">USB permission denied</string>
+    <string name="state_disconnected">Disconnected</string>
+    <string name="state_error">Error: %1$s</string>
+    <string name="device_none">—</string>
+
+    <!-- Detection screen -->
+    <string name="detection_title">Controller Detection</string>
+    <string name="label_device">Device:</string>
+    <string name="btn_retry">RETRY SCAN</string>
+
+    <!-- Diagnostic screen -->
+    <string name="diag_title">Byte Inspector &amp; Calibration</string>
+    <string name="diag_hex_label">Latest raw frame (hex):</string>
+    <string name="no_bytes">(no bytes yet — move a stick)</string>
+    <string name="diag_axes_label">Decoded candidate axes (raw / normalised):</string>
+    <string name="axis_left_x">Left X</string>
+    <string name="axis_left_y">Left Y</string>
+    <string name="axis_right_x">Right X</string>
+    <string name="axis_right_y">Right Y</string>
+    <string name="axis_dial">Dial</string>
+    <string name="axis_value_fmt">%1$d  (%2$.2f)</string>
+    <string name="diag_calib_label">Calibration (select axis, then capture):</string>
+    <string name="btn_cap_min">MIN</string>
+    <string name="btn_cap_center">CENTRE</string>
+    <string name="btn_cap_max">MAX</string>
+    <string name="btn_reset_calib">RESET</string>
+    <string name="calib_fmt">%1$s → min %2$d / centre %3$d / max %4$d</string>
+    <string name="calib_captured">Captured %1$s = %2$d</string>
+    <string name="calib_no_frame">No frame yet — connect &amp; move the stick first</string>
+    <string name="calib_reset">Calibration reset to defaults</string>
+
+    <!-- In-game toasts -->
+    <string name="toast_rc_connected">RC CONTROLLER CONNECTED — Switching to RC mode.</string>
+    <string name="toast_rc_disconnected">RC DISCONNECTED — Switching to touch mode.</string>
+</resources>

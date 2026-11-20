@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- One axis row in the diagnostic screen: label | bar | value. -->
+    <style name="DiagRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="DiagAxisLabel">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/hud_text</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="DiagAxisValue">
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/hud_text</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="DiagRadio">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:buttonTint">@color/rc_green</item>
+        <item name="android:textColor">@color/hud_text</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="DiagCalBtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

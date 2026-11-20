@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/diag_title"
+            android:textColor="@color/hud_text"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/state_no_device"
+            android:textColor="@color/hud_amber"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDevice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/device_none"
+            android:textColor="@color/hud_text"
+            android:textSize="13sp" />
+
+        <!-- Raw hex -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/diag_hex_label"
+            android:textColor="@color/rc_green"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtHex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="#20000000"
+            android:fontFamily="monospace"
+            android:padding="8dp"
+            android:text="@string/no_bytes"
+            android:textColor="@color/hud_text"
+            android:textSize="12sp" />
+
+        <!-- Axis bars -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/diag_axes_label"
+            android:textColor="@color/rc_green"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Left X -->
+        <LinearLayout style="@style/DiagRow">
+            <TextView style="@style/DiagAxisLabel" android:text="@string/axis_left_x" />
+            <ProgressBar
+                android:id="@+id/barLeftX"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100" />
+            <TextView android:id="@+id/valLeftX" style="@style/DiagAxisValue" />
+        </LinearLayout>
+
+        <!-- Left Y -->
+        <LinearLayout style="@style/DiagRow">
+            <TextView style="@style/DiagAxisLabel" android:text="@string/axis_left_y" />
+            <ProgressBar
+                android:id="@+id/barLeftY"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100" />
+            <TextView android:id="@+id/valLeftY" style="@style/DiagAxisValue" />
+        </LinearLayout>
+
+        <!-- Right X -->
+        <LinearLayout style="@style/DiagRow">
+            <TextView style="@style/DiagAxisLabel" android:text="@string/axis_right_x" />
+            <ProgressBar
+                android:id="@+id/barRightX"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100" />
+            <TextView android:id="@+id/valRightX" style="@style/DiagAxisValue" />
+        </LinearLayout>
+
+        <!-- Right Y -->
+        <LinearLayout style="@style/DiagRow">
+            <TextView style="@style/DiagAxisLabel" android:text="@string/axis_right_y" />
+            <ProgressBar
+                android:id="@+id/barRightY"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100" />
+            <TextView android:id="@+id/valRightY" style="@style/DiagAxisValue" />
+        </LinearLayout>
+
+        <!-- Dial -->
+        <LinearLayout style="@style/DiagRow">
+            <TextView style="@style/DiagAxisLabel" android:text="@string/axis_dial" />
+            <ProgressBar
+                android:id="@+id/barDial"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100" />
+            <TextView android:id="@+id/valDial" style="@style/DiagAxisValue" />
+        </LinearLayout>
+
+        <!-- Calibration -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/diag_calib_label"
+            android:textColor="@color/rc_green"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/axisGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/rbLeftX" style="@style/DiagRadio" android:text="@string/axis_left_x" />
+            <RadioButton android:id="@+id/rbLeftY" style="@style/DiagRadio" android:checked="true" android:text="@string/axis_left_y" />
+            <RadioButton android:id="@+id/rbRightX" style="@style/DiagRadio" android:text="@string/axis_right_x" />
+            <RadioButton android:id="@+id/rbRightY" style="@style/DiagRadio" android:text="@string/axis_right_y" />
+            <RadioButton android:id="@+id/rbDial" style="@style/DiagRadio" android:text="@string/axis_dial" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnCapMin" style="@style/DiagCalBtn" android:text="@string/btn_cap_min" />
+            <Button android:id="@+id/btnCapCenter" style="@style/DiagCalBtn" android:text="@string/btn_cap_center" />
+            <Button android:id="@+id/btnCapMax" style="@style/DiagCalBtn" android:text="@string/btn_cap_max" />
+            <Button android:id="@+id/btnReset" style="@style/DiagCalBtn" android:text="@string/btn_reset_calib" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtCalib"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:textColor="@color/hud_text"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</ScrollView>
